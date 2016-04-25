@@ -18,6 +18,12 @@ public class Main {
 		});
 	}
 	
+	/**
+	 * returns the Gui
+	 * 
+	 * @author xize
+	 * @return Gui
+	 */
 	public static Gui getGui() {
 		return screen;
 	}

@@ -6,6 +6,13 @@ public class Scheduler {
 	
 	private static Timer timer = new Timer();
 	
+	/**
+	 * starts a delayed task
+	 * 
+	 * @author xize
+	 * @param run - the gta runnable
+	 * @param when - when the task fires
+	 */
 	public static void scheduleDelayedTask(GTARunnable run, long when) {
 		if(timer == null) {
 			timer = new Timer();
@@ -13,13 +20,26 @@ public class Scheduler {
 		timer.schedule(run, when);
 	}
 	
-	public static void runTaskTimer(GTARunnable run, long start, long end) {
+	/**
+	 * starts a scheduled task
+	 * 
+	 * @author xize
+	 * @param run - the GTA runnable
+	 * @param delay
+	 * @param end
+	 */
+	public static void runTaskTimer(GTARunnable run, long delay, long period) {
 		if(timer == null) {
 			timer = new Timer();
 		}
-		timer.scheduleAtFixedRate(run, start, end);
+		timer.scheduleAtFixedRate(run, delay, period);
 	}
 	
+	/**
+	 * cancels all tasks
+	 * 
+	 * @author xize
+	 */
 	public static void cancel() {
 		if(timer == null) {
 			timer = new Timer();

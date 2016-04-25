@@ -20,12 +20,36 @@ public interface Gui {
 	 */
 	public void initializeListeners();
 
+	/**
+	 * returns the steam open button
+	 * 
+	 * @author xize
+	 * @return JButton
+	 */
 	public JButton getSteamButton();
 	
+	/**
+	 * returns the without steam open button
+	 * 
+	 * @author xize
+	 * @return JButton
+	 */
 	public JButton getWithoutSteamButton();
 	
+	/**
+	 * returns the textarea
+	 * 
+	 * @author xize
+	 * @return JTextArea
+	 */
 	public JTextArea getTextArea();
 	
+	/**
+	 * returns the scollpane
+	 * 
+	 * @author xize
+	 * @return JScrollPane
+	 */
 	public JScrollPane getScrollPane();
 	
 }
