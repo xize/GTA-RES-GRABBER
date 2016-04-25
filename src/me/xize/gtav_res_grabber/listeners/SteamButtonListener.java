@@ -27,7 +27,7 @@ public class SteamButtonListener implements ActionListener {
 			int sel = fc.showOpenDialog(null);
 			if(sel == JFileChooser.APPROVE_OPTION && fc.getSelectedFile().getName().equalsIgnoreCase("Steam.exe")) {
 				TextWriter.getWriter().write("Steam found, initializing GTA V");
-				TextWriter.getWriter().write("windows resolution before GTA V launch: "+Math.round(Toolkit.getDefaultToolkit().getScreenSize().getWidth())+"*"+Math.round(Toolkit.getDefaultToolkit().getScreenSize().getHeight()));
+				TextWriter.getWriter().write("windows resolution before GTA V launch: "+Toolkit.getDefaultToolkit().getScreenSize().getWidth()+"*"+Toolkit.getDefaultToolkit().getScreenSize().getHeight());
 				TextWriter.getWriter().write("firing command: Steam.exe -applaunch 271590");
 				Process proc = null;
 				try {
@@ -51,7 +51,7 @@ public class SteamButtonListener implements ActionListener {
 			@Override
 			public void run() {
 				TextWriter.getWriter().write("do tick: "+count++);
-				TextWriter.getWriter().write("windows resolution: "+Math.round(Toolkit.getDefaultToolkit().getScreenSize().getWidth())+"*"+Math.round(Toolkit.getDefaultToolkit().getScreenSize().getHeight()));
+				TextWriter.getWriter().write("windows resolution: "+Toolkit.getDefaultToolkit().getScreenSize().getWidth()+"*"+Toolkit.getDefaultToolkit().getScreenSize().getHeight());
 				try {
 					TextWriter.getWriter().write("process resolution: "+Arrays.toString(Window.getRect("Grand Theft Auto V")));
 				} catch (WindowNotFoundException e) {
