@@ -40,8 +40,6 @@ public class GuiScreen extends JFrame implements Gui {
 		setMinimumSize(new Dimension(500, 400));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
-		pack();
-		setVisible(true);
 		
 		JPanel buttons = new JPanel();
 		this.steam = new JButton("launch with steam");
@@ -60,6 +58,8 @@ public class GuiScreen extends JFrame implements Gui {
 		textb.add(scrollpane);
 		add(textb);
 		
+		pack();
+		setVisible(true);
 	}
 
 	@Override
