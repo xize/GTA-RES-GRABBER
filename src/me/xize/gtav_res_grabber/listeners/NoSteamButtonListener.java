@@ -11,8 +11,6 @@ import javax.swing.JFileChooser;
 import me.xize.gtav_res_grabber.Main;
 import me.xize.gtav_res_grabber.TextWriter;
 import me.xize.gtav_res_grabber.Window;
-import me.xize.gtav_res_grabber.Window.GetWindowRectException;
-import me.xize.gtav_res_grabber.Window.WindowNotFoundException;
 import me.xize.gtav_res_grabber.scheduler.GTARunnable;
 import me.xize.gtav_res_grabber.scheduler.Scheduler;
 
@@ -53,11 +51,9 @@ public class NoSteamButtonListener implements ActionListener {
 					TextWriter.getWriter().write("do tick: "+count++);
 					TextWriter.getWriter().write("windows resolution: "+Toolkit.getDefaultToolkit().getScreenSize().getWidth()+"*"+Toolkit.getDefaultToolkit().getScreenSize().getHeight());
 					try {
-						TextWriter.getWriter().write("process resolution: "+Arrays.toString(Window.getRect("Grand Theft Auto V")));
-					} catch (WindowNotFoundException e) {
-						TextWriter.getWriter().write("process window not found, maybe wrong window name?");
-					} catch (GetWindowRectException e) {
-						TextWriter.getWriter().write("process exists, window is null");
+						TextWriter.getWriter().write("process resolution: "+Arrays.toString(Window.getWindowApi().getWindowSize("Grand Theft Auto V")));
+					} catch (Exception e) {
+						TextWriter.getWriter().write(e.getMessage());
 					}
 				}
 				
