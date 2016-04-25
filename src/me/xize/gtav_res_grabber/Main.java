@@ -4,7 +4,7 @@ import javax.swing.SwingUtilities;
 
 public class Main {
 	
-	private final static Gui screen = new GuiScreen("GTA V Resolution grabber v1.0 by Xize");
+	private final static Gui screen = new GuiScreen("GTA V Resolution grabber v1.1 by Xize");
 	
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
